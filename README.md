@@ -58,10 +58,6 @@ The project follows a structured machine learning workflow:
 The dataset shows the distribution of individuals who received the H1N1 vaccine versus those who did not.
 ![Target Distribution](images/target_distribution.png)
 
-##### Vaccine Uptake by Age Group
-Vaccination uptake varies across age groups, highlighting the importance of demographic factors in vaccination decisions.
-![Age Group Vaccination](images/age_group_vaccine.png)
-
 ##### Vaccine Uptake by Sex
 This visualization shows differences in vaccination uptake between male and female respondents.
 ![Vaccine Uptake by Sex](images/vaccine_uptake_by_sex.png)
@@ -126,17 +122,28 @@ This model was selected as the final model because it:
 
 DrivenData. (2020). Flu Shot Learning: Predict H1N1 and Seasonal Flu Vaccines. Retrieved [Month Day Year] from https://www.drivendata.org/competitions/66/flu-shot-learning.
 --
-
-## Runtime Information
-- Total notebook runtime: 50.20 seconds
-- Environment: Local machine (Python 3.11)
 --
 ##  Project Structure
 
 ```
+H1N1-Vaccine-Prediction/
+│
 ├── data/
-├── notebooks/
-├── models/
-├── README.md
-└── requirements.txt
+│   ├── training_set_features.csv
+│   ├── training_set_labels.csv
+│   └── test_set_features.csv
+│
+├── images/
+│   ├── target_distribution.png
+│   ├── model_comparison.png
+│   ├── vaccine_uptake_by_sex.png
+│   ├── vaccine_uptake_by_education.png
+│   ├── vaccine_uptake_doctor_recommendation.png
+│   ├── vaccine_uptake_health_workers.png
+│   └── h1n1_knowledge_vaccination.png
+│
+├── h1n1_vaccine_analysis.ipynb     
+├── H1N1ML.pdf                       
+├── requirements.txt
+└── README.md
 
