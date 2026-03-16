@@ -34,8 +34,8 @@ The dataset contains demographic, behavioral, and attitudinal variables such as:
 * Household information
 * Behavioral indicators
 
-Target variable:
 
+Target variable:
 * `h1n1_vaccine`
 
 ---
@@ -50,11 +50,33 @@ The project follows a structured machine learning workflow:
 * Encoding categorical variables
 * Handling missing values
 * Feature preparation
+--
+
+### Data visualizations
+
+##### Target Distribution
+The dataset shows the distribution of individuals who received the H1N1 vaccine versus those who did not.
+![Target Distribution](images/target_distribution.png)
+
+##### Vaccine Uptake by Age Group
+Vaccination uptake varies across age groups, highlighting the importance of demographic factors in vaccination decisions.
+![Age Group Vaccination](images/age_group_vaccine.png)
+
+##### Vaccine Uptake by Sex
+This visualization shows differences in vaccination uptake between male and female respondents.
+![Vaccine Uptake by Sex](images/vaccine_uptake_by_sex.png)
+
+##### Vaccine Uptake by Education Level
+Education level may influence health awareness and attitudes toward vaccination.
+![Vaccine Uptake by Education](images/vaccine_uptake_by_education.png)
+
+##### Doctor Recommendation and Vaccine Uptake
+Healthcare provider recommendations are often a strong predictor of vaccination behavior.
+![Doctor Recommendation Vaccine Uptake](images/vaccine_uptake_doctor_recommendation.png)
 
 ### 2 Model Development
 
 The following models were implemented:
-
 * Logistic Regression (Baseline Model)
 * Tuned Logistic Regression
 * Decision Tree
@@ -65,7 +87,7 @@ The following models were implemented:
 
 ## Evaluation Metrics
 
-Models were evaluated using:
+Models evaluated using:
 
 * **Accuracy**
 * **ROC-AUC Score**
@@ -73,15 +95,17 @@ Models were evaluated using:
 * **Recall**
 * **F1-Score**
 * **ROC Curves**
-
 ROC-AUC was particularly important because the dataset is slightly imbalanced.
+
+## Model Comparison
+The following visualization compares the predictive performance of the machine learning models developed in this project.
+![Model Comparison](images/model_comparison.png)
 
 ---
 
 ## Final Model
 
 The **Random Forest ensemble model** achieved the best overall performance, with the highest accuracy and strong ROC-AUC score.
-
 This model was selected as the final model because it:
 * Captured complex patterns in the data
 * Provided strong predictive performance
@@ -98,6 +122,15 @@ This model was selected as the final model because it:
 
 ---
 
+## Reference
+
+DrivenData. (2020). Flu Shot Learning: Predict H1N1 and Seasonal Flu Vaccines. Retrieved [Month Day Year] from https://www.drivendata.org/competitions/66/flu-shot-learning.
+--
+
+## Runtime Information
+- Total notebook runtime: 50.20 seconds
+- Environment: Local machine (Python 3.11)
+--
 ##  Project Structure
 
 ```
@@ -106,12 +139,4 @@ This model was selected as the final model because it:
 ├── models/
 ├── README.md
 └── requirements.txt
-
----
-##  Presentation
-You can view the final presentation for this project here: 
-* [ View Presentation (H1N1ML.pdf)](./H1N1ML.pdf)
-
-## Reference
-DrivenData. (2020). Flu Shot Learning: Predict H1N1 and Seasonal Flu Vaccines. Retrieved [Month Day Year] from https://www.drivendata.org/competitions/66/flu-shot-learning.
 
