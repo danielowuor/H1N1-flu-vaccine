@@ -108,6 +108,9 @@ This model was selected as the final model because it:
 └── requirements.txt
 
 ---
+##  Presentation
+You can view the final presentation for this project here: 
+* [ View Presentation (H1N1ML.pdf)](./H1N1ML.pdf)
 
 ## Reference
 DrivenData. (2020). Flu Shot Learning: Predict H1N1 and Seasonal Flu Vaccines. Retrieved [Month Day Year] from https://www.drivendata.org/competitions/66/flu-shot-learning.
