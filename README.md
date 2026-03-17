@@ -23,6 +23,14 @@ To build and compare multiple classification models in order to:
 
 ---
 
+## Stakeholders
+
+1. Public Health Organizations to design targeted vaccination campaigns and improve public health strategies.
+2. Healthcare Providers to help them better communicate the importance of vaccination.
+3. Government Health Policy Makers to create policies that improve vaccine accessibility and coverage.
+4. Public Health Researchers and Epidemiologists.
+
+--
 ## Dataset
 
 The dataset contains demographic, behavioral, and attitudinal variables such as:
