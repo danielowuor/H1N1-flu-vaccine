@@ -129,12 +129,12 @@ To maintain scientific integrity, the unseen data underwent the exact same trans
 = Class Labels: A binary 0 or 1, representing the final "Yes/No" prediction.
 - Probability Scores: A continuous value between 0.0 and 1.0, indicating the model's confidence in the vaccine uptake.
 
-## Key Insights
-
+## Conclusion
+The model demonstrates that vaccination behavior is influenced not only by demographic factors but also by perceptions, knowledge, and healthcare interactions.
 * Doctor recommendations and personal risk perception strongly influence vaccination behavior.
 * Ensemble methods improved predictive performance compared to a single decision tree.
 * Handling class imbalance improved recall for vaccinated individuals.
-* Machine learning models can support public health planning and targeted vaccination strategies.
+
 
 ---
 
