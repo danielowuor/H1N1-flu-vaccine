@@ -47,9 +47,19 @@ The project follows a structured machine learning workflow:
 ### 1 Data Preprocessing
 
 * Train_test split
-* Encoding categorical variables
-* Handling missing values
-* Feature preparation
+* The Transformation Pipeline
+The data was split into three distinct streams based on feature type:
+Numeric Stream:
+- Imputation: Missing values filled using the Median to stay robust.
+- Scaling: StandardScaler applied to ensure that features with larger ranges (like household size) don't dominate features with smaller ranges.
+
+Ordinal Stream (Ranked Categories):
+- Features: age_group, education, and income_poverty.
+- Logic: Unlike standard encoding, I defined manual rankings (e.g., College Graduate > Some College). This preserves the mathematical relationship between life stages and socioeconomic status.
+
+Nominal Stream (Categorical):
+- Features: race, sex, marital_status, etc.
+- Encoding: OneHotEncoder was used with drop='if_binary' to reduce redundancy (preventing the "Dummy Variable Trap") while allowing the model to treat different groups independently without implying a numerical order.
 --
 
 ### Data visualizations
@@ -108,6 +118,16 @@ This model was selected as the final model because it:
 * Performed better than simpler models
 
 ---
+
+## Final Predictions on Unseen Data
+The ultimate goal of this project was to apply the trained Random Forest model to an "unseen" dataset (test_set_features.csv) to predict the likelihood of individuals receiving the H1N1 vaccine.
+
+* Methodology
+To maintain scientific integrity, the unseen data underwent the exact same transformation process as the training data:
+- No Data Leakage: The preprocessor was not refitted; it used the parameters (means, medians, and encodings) established during the training phase.
+- Output Types: The model generated two distinct types of outputs:
+= Class Labels: A binary 0 or 1, representing the final "Yes/No" prediction.
+- Probability Scores: A continuous value between 0.0 and 1.0, indicating the model's confidence in the vaccine uptake.
 
 ## Key Insights
 
